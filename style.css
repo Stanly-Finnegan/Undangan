@@ -3,13 +3,17 @@
     --pink : #f14e95;
     --bg : #0a0a0a;
     --shadow : 0 2px 2px rgb(0 0 0 / 0.5);
-    --beggie : #f5f5dc
+    --beggie : #f5f5dc;
+    --sage : #77815c ;
+    --darksage :#77815cb5;
+    --darkbrown : #2c1407;
+    --darkbrown50 : #2c140780;
 }
 
 body{
     font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
-    min-height: 2000px;
+    min-height: 4000px;
 }
 
 .hero{
@@ -36,6 +40,7 @@ body{
 
 .hero h4{
     font-size: 2rem;
+    
 }
 
 .hero h1{
@@ -48,25 +53,27 @@ body{
 } */
 
 .hero a{
-    color: var(--pink);
-    background-color: white;
+    color: white;
+    background-color: var(--sage);
 }
 
 .hero a:hover{
-    background-color: var(--pink);
+    background-color: var(--darksage);
     color: white;
 
 }
-
+/* 
 .mynavbar{
     background-color: rgba(255, 255, 255, 0.2);
-    /* backdrop-filter: blur(4px); */
+    backdrop-filter: blur(4px);
 }
+
 
 .mynavbar .navbar-brand, .mynavbar .offcanvas-title{
     font-family: 'Sacramento', cursive;
     font-size: 3.5rem;
     font-weight: 500;
+    color: var(--darkbrown);
 }
 
 .mynavbar .offcanvas{
@@ -76,15 +83,22 @@ body{
 
 .mynavbar .nav-link{
     text-transform: uppercase;
-}
+} */
 
 .home{
     background-color: var(--beggie);
-    background-size: cover;
-    min-height: 110vh;
-    margin-top: -6.9rem;
-    padding-top: 10rem;
+    /* background-size: cover; */
+    /* min-height: 100%; */
+    /* margin-top: -6.9rem; */
+    padding-top: 6rem;
     padding-bottom: 5rem;
+    color: var(--darkbrown);
+}
+
+
+.home .small{
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 .home h2{
@@ -94,14 +108,21 @@ body{
 }
 
 .home h3{
-    color: #444;
+    /* color: #444; */
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .home p{
     font-size: 1.1rem;
-    color: #666;
+    /* color: #666; */
+    
+}
+
+.home .ayat{
+    font-size: 0.9rem;
+    color: var(--darkbrown50) ;
+
 }
 
 .home .couple{
@@ -132,6 +153,18 @@ body{
 .home .heart i{
     margin: auto;
     color: var(--pink);
+}
+
+.info{
+    background-color: var(--bg);
+    color: white;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.info h2{
+    font-size: 5rem;
+    font-weight: 500;
 }
 
 
