@@ -31,6 +31,7 @@ body{
     background-image: url(image/heroBG.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     z-index: -1;
     filter: brightness(50%);
 }
@@ -197,12 +198,6 @@ body{
 
 /* Media Query */
 
-/* Extra Large */
-@media (max-width: 1200px){
-    .home .heart {
-        transform: translateX(-50%) translateY(45px);
-    }
-}
 
 /* Laptop */
 @media (max-width: 992px){
@@ -211,7 +206,7 @@ body{
     }
 
     .simply-countdown > .simply-section{
-        padding: 70px;
+        padding: 47px;
     }
 
     .home .heart {
@@ -227,7 +222,7 @@ body{
     }
 
     .simply-countdown > .simply-section{
-        padding: 47px;
+        padding: 40px;
         margin: 5px;
     }
 
@@ -246,20 +241,20 @@ body{
     }
 
     .simply-countdown > .simply-section{
-        padding: 40px;
+        padding: 30px;
         margin: 3px;
     }
     
 }
 
 /* Mobile Phone S */
-@media (max-width: 320px){
+@media (max-width: 386px){
     html{
         font-size: 45%;
     }
 
     .simply-countdown > .simply-section{
-        padding: 30px;
+        padding: 25px;
         margin: 2px;
     }
 }
