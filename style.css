@@ -33,7 +33,7 @@ body{
     background-image: url(image/heroBG.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     z-index: -1;
     filter: brightness(50%);
 }
