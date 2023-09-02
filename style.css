@@ -55,12 +55,14 @@ body{
 .hero a:hover{
     background-color: var(--pink);
     color: white;
+
 }
+
 
 
 .mynavbar{
     background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px); */
 }
 
 .mynavbar .navbar-brand, .mynavbar .offcanvas-title{
@@ -110,7 +112,7 @@ body{
 
 .home .couple h3{
     font-family: 'Sacramento', cursive;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
 }
 
 .home .couple img{
