@@ -47,3 +47,10 @@ if(!localStorage.getItem('opened')){
     disableScroll();
 }
 
+function copyNumber(){
+    const number = "000000";
+
+    navigator.clipboard.writeText(number);
+    alert("Berhasil disalin")
+}
+

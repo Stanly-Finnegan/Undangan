@@ -174,7 +174,7 @@ body{
 
 .info h3{
     font-family: 'Sacramento', cursive;
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 2rem;
 
 }
@@ -208,6 +208,42 @@ body{
     margin-bottom: 2rem;
 }
 
+.gifts{
+    background-color: var(--darksage);
+    padding: 4rem;
+}
+
+.gifts .container{
+    background-color: var(--beggie);
+    width: 60%;
+    padding: 2rem;
+}
+
+.gifts h2{
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+.gifts img{
+    width: 70%;
+    margin: 1.5rem;
+}
+
+.gifts p{
+    font-size: 1.6rem;
+    margin: 0;
+    color: var(--darkbrown);
+}
+
+.gifts .label{
+    font-size: 1.2rem;
+    color: var(--darkbrown50);
+}
+
+.gifts .btn{
+    background-color: var(--sage);
+}
 
 
 /* Media Query */
