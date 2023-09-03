@@ -16,11 +16,14 @@ simplyCountdown('.simply-countdown', {
 });
 
 const rootElement = document.querySelector(":root");
+const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+const audioIcon = document.querySelector('.audio-icon-wrapper i');
+let isPlaying = false; 
 
 function disableScroll(){   
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
+    const song = document.getElementById("song")
     window.onscroll = function(){
         window.scrollTo(scrollTop,scrollLeft);
     }
@@ -29,8 +32,27 @@ function disableScroll(){
     rootElement.style.scrollBehavior = "auto"
 }
 
+function playAudio(){
+    ;
+    song.play();
+    audioIconWrapper.style.display = 'flex'
+    isPlaying = true;
+}
 
-
+audioIconWrapper.onclick = function(){
+    if(isPlaying){
+        song.pause();
+        audioIcon.classList.remove('bi-disc');
+        audioIcon.classList.add('bi-pause-circle');
+    }
+    else{
+        song.play();
+        audioIcon.classList.remove('bi-pause-circle');
+        audioIcon.classList.add('bi-disc')
+    }
+    
+    isPlaying = !isPlaying;
+}
 
 function enableScroll(){
     window.onscroll = function(){
@@ -38,14 +60,18 @@ function enableScroll(){
 
     rootElement.style.scrollBehavior = "smooth";
 
-    localStorage.setItem('opened', 'true');
+    // localStorage.setItem('opened', 'true');
+
+    playAudio();
 
 }
 
 
-if(!localStorage.getItem('opened')){
-    disableScroll();
-}
+// if(!localStorage.getItem('opened')){
+//     disableScroll();
+// }
+
+disableScroll();
 
 function copyNumber(){
     const number = "000000";
@@ -54,3 +80,27 @@ function copyNumber(){
     alert("Berhasil disalin")
 }
 
+
+window.addEventListener("load", function() {
+    const form = document.getElementById('my-form');
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        alert("Berhasil dikirim")
+      })
+    });
+  });
+  
+
+
+const urlParams = new URLSearchParams(window.location.search);
+const nama = urlParams.get('to');
+console.log(nama);
+const namaContainer = document.getElementById('namaTamu');
+namaContainer.innerText = nama;

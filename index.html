@@ -24,7 +24,7 @@
   <body>
     
 
-    <section id="hero" class="hero w-100 h-100 d mx-auto text-center d-flex
+    <section id="hero" class="hero w-100 h-100  mx-auto text-center d-flex
     justify-content-center align-items-center text-white">
         <main>
             <h4>The Wedding of</h4>
@@ -65,7 +65,7 @@
           <div class="col-md-8 text-center">
             <h2>Resepsi Pernikahan</h2>
             <h3>Minggu, 15 Oktober 2023</h3>
-            <p>Dengan segala hormat, kami mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan kami.</p>
+            <p>Dengan segala hormat, kami mengundang<br> <span id="namaTamu"></span>, <br> untuk hadir pada acara pernikahan kami.</p>
 
           </div>
         </div>
@@ -122,16 +122,15 @@
           <br>
           <p>Restoran Gajah Mada</p>
           <p>Jl. Gajah Mada No.202 Pontianak</p>
-          <a href="https://goo.gl/maps/7dY1zbJjgyYAHZDV8" class="btn btn-sm btn-secondary">GOOGLE MAPS</a>
+          <a href="https://goo.gl/maps/7dY1zbJjgyYAHZDV8" class="btn btn-sm btn-light">Google Maps</a>
          </div>
 
          <hr>
-         <h2>COUNT DOWN</h2>
+         <h2>Count Down Our Wedding Day</h2>
+
          <div class="simply-countdown mt-3"></div>
 
-         <div class="col-8 mt-5">
-           <p>Tiada rangkaian kata yang indah dan patuh kami ucapkan selain terima kasih atas kehadiran dan Doa Restu dari Bapak/Ibu/Saudara/i.</p>
-         </div>
+         
 
         
       </div>
@@ -204,13 +203,80 @@
             <p id="accNumber" >123455678</p>
             <p class="label">An. Susanto</p>
             <hr>
-            <div class="btn btn-md btn-secondary"  onclick="copyNumber()">
+            <div class="btn btn-lg btn-secondary"  onclick="copyNumber()">
               <i class="bi bi-files"></i>
               <span>Salin Nomor</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="rsvp" id="rsvp">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2 class="text-center mb-5">Konfirmasi Kehadiran</h2>
+          <div class="col-md-8 col-10 ">
+            <form 
+            id="my-form"
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbzTgGWXt9e_le-OEgOK05_WSRqyFOQRqRUnqglI1tmtk0HcER-kUqdAXqcllVGeFVgJFQ/exec">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="nama" name="nama" class="form-control form-control-lg" id="nama">
+              </div>
+              <div class="mb-3">
+                <label for="ucapan" class="form-label">Ucapan</label>
+                <textarea class="form-control form-control-lg" name="ucapan" id="ucapan" rows="3" ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="status" class="form-label">Konfirmasi Kehadiran</label>
+                <select id="status" name="status" class="form-select form-select-lg" >
+                  <option selected hidden>Konfirmasi</option>
+                  <option value="hadir">Hadir</option>
+                  <option value="mungkin">Mungkin</option>
+                  <option value="tidak">Tidak Hadir</option>
+                </select>
+              </div>
+              <button id="submitBtn" class="btn btn-lg btn-secondary mt-3">Kirim</button>
+            </form>
+            <div class=" text-center">
+              <p>Tiada rangkaian kata yang indah dan patuh kami ucapkan selain terima kasih atas kehadiran dan Doa Restu dari Bapak/Ibu/Saudara/i.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer w-100 h-100  mx-auto text-center d-flex
+    justify-content-center align-items-center row">
+        
+            <h4>Thank You</h4>
+            <h1>Susanto & Viky</h1>
+            <h2>15 Oktober 2023</h2>
+           
+            <div class="copyright">
+              <small>&copy; 2023 Susanto & Viky Wedding. All Rights Reserved. Designed by <a href="https://www.instagram.com/stanly_finnegan/">@Stanly_Finnegan</a></small>
+            
+            <ul>
+              <li><a href="https://www.instagram.com/stanly_finnegan/"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/stanly-finnegan/"><i class="bi bi-linkedin"></i></a></li>
+              <li><a href="mailto: finnegan.esl@gmail.com"><i class="bi bi-envelope-at-fill"></i></a></li>
+            </ul>
+            </div>
+       
+
+    </footer>
+
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="Song/beautifull in white.mp3 " type="audio/mp3">
+      </audio>
+
+     <div class="audio-icon-wrapper"  >
+      <i class="bi bi-disc"></i>
+     </div>
+
     </div>
 
 

@@ -6,6 +6,7 @@
     --beggie : #f5f5dc;
     --sage : #77815c ;
     --darksage :#77815cb5;
+    --sage50 : #4d533c;
     --darkbrown : #2c1407;
     --darkbrown50 : #2c140780;
     --darkbrown80 : #2c1407b9;
@@ -14,7 +15,6 @@
 body{
     font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
-    min-height: 4000px;
 }
 
 .hero{
@@ -33,7 +33,6 @@ body{
     background-image: url(image/heroBG.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: repeat;
     z-index: -1;
     filter: brightness(50%);
 }
@@ -124,6 +123,10 @@ body{
     
 }
 
+.home p span{
+    font-weight: bold;
+}
+
 .home .ayat{
     font-size: 0.9rem;
     color: var(--darkbrown50) ;
@@ -179,6 +182,11 @@ body{
 
 }
 
+.info h2{
+    font-size: 4rem;
+    font-family: 'Sacramento', cursive;
+}
+
 
 .info  p{
     font-size: 1.4rem;
@@ -188,6 +196,8 @@ body{
 
 .info a{
     margin: 1.3rem;
+    font-weight: 500;
+    color: black;
 }
 
 .info hr{
@@ -215,7 +225,7 @@ body{
 
 .gifts .container{
     background-color: var(--beggie);
-    width: 60%;
+    width: 80%;
     padding: 2rem;
 }
 
@@ -231,18 +241,133 @@ body{
 }
 
 .gifts p{
-    font-size: 1.6rem;
+    font-size: 3rem;
     margin: 0;
     color: var(--darkbrown);
 }
 
 .gifts .label{
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     color: var(--darkbrown50);
 }
 
 .gifts .btn{
     background-color: var(--sage);
+}
+
+.rsvp{
+    background-color: var(--sage50);
+    color: white;
+    padding: 6rem;
+    font-size: 1.6rem;
+}
+
+.rsvp h2{
+    font-family:'Sacramento';
+    font-size: 5rem;
+    
+}
+
+.rsvp p{
+    margin-top: 5rem;
+    font-size: 1.2rem;
+}
+
+footer h4{
+    font-size: 3rem;
+}
+
+footer h1{
+    font-size: 5rem;
+    font-family: 'Sacramento', cursive;
+    margin-top: 4rem;
+}
+
+footer h2{
+    font-size: 2.2rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(75, 121, 186);
+}
+
+footer a:hover{
+    color: white;
+}
+
+footer .copyright{
+    bottom: 0;
+    font-size: 0.8rem;
+}
+
+footer li{
+    display: inline;
+}
+
+footer i:hover{
+    color: white;
+}
+
+footer i{
+    color: rgb(75, 121, 186);
+}
+
+
+
+footer{
+    min-height: 80svh;
+    color: white;
+    position: relative;
+    /* background-image: url(image/footerBG.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat; */
+}
+
+footer ::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/footerBG.jpg);
+    background-position: center;
+    background-size: cover;
+    /* background-repeat: repeat; */
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+
+.audio-icon-wrapper{
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: 50%;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    display: none;
+}
+
+@keyframes rotating {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 
