@@ -196,6 +196,18 @@ body{
     background-color: var(--beggie);
 }
 
+.gallery{
+    background-color: var(--darksage);
+    padding: 5rem;
+}
+
+.gallery h2{
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
 
 
 /* Media Query */
