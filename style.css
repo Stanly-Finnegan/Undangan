@@ -123,10 +123,6 @@ body{
     
 }
 
-.home p span{
-    font-weight: bold;
-}
-
 .home .ayat{
     font-size: 0.9rem;
     color: var(--darkbrown50) ;

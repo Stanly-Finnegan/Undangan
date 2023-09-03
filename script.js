@@ -100,7 +100,14 @@ window.addEventListener("load", function() {
 
 
 const urlParams = new URLSearchParams(window.location.search);
-const nama = urlParams.get('to');
+const nama = urlParams.get('to')||'';
 console.log(nama);
 const namaContainer = document.getElementById('namaTamu');
-namaContainer.innerText = nama;
+if(!nama){
+    namaContainer.innerText = ` Bapak/Ibu/Saudara/i,`;
+    namaContainer.style.fontWeight = 'unset';
+}
+else{
+    namaContainer.innerText = `\n ${nama}, \n`;
+    namaContainer.style.fontWeight = 'bold';
+}
