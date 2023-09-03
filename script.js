@@ -14,3 +14,36 @@ simplyCountdown('.simply-countdown', {
 
     refresh: 1000, //default refresh every 1s
 });
+
+const rootElement = document.querySelector(":root");
+
+function disableScroll(){   
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+    window.onscroll = function(){
+        window.scrollTo(scrollTop,scrollLeft);
+    }
+
+    
+    rootElement.style.scrollBehavior = "auto"
+}
+
+
+
+
+function enableScroll(){
+    window.onscroll = function(){
+    }
+
+    rootElement.style.scrollBehavior = "smooth";
+
+    localStorage.setItem('opened', 'true');
+
+}
+
+
+if(!localStorage.getItem('opened')){
+    disableScroll();
+}
+
