@@ -89,13 +89,15 @@ function copyNumber(htmlElement){
     inputElement.select();
     document.execCommand('copy');
     inputElement.parentNode.removeChild(inputElement);
+
+
     // const number = "721301006149531";
     // number.focus();
     // number.ariaSelected();
     // navigator.clipboard.writeText(number);
     // document.execCommand('copy');
     // window.prompt("Copy to clipboard?", number);
-    // alert("Berhasil disalin")
+    alert("Berhasil disalin");
     
 }
 
