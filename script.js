@@ -74,10 +74,10 @@ function enableScroll(){
 disableScroll();
 
 function copyNumber(){
-    const number = "000000";
+    const number = "721301006149531";
     // navigator.clipboard.writeText(number);
-    window.prompt("Copy to clipboard: Ctrl+C, Enter", number);
-    alert("Berhasil disalin")
+    window.prompt("Copy to clipboard?", number);
+    // alert("Berhasil disalin")
 }
 
 
