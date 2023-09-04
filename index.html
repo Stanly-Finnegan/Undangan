@@ -314,13 +314,13 @@
           <div class="col-md-8 col-10 text-center">
             <img src="image/BANK_BRI_logo_(vertical).svg.png" alt="Logo BCA" />
             <p class="label">Nomor Rekening</p>
-            <p id="accNumber">721301006149531</p>
+            <p id="accNumber" class="accNumber">721301006149531</p>
             <p class="label">An. SUSANTO</p>
             <hr />
-            <div class="btn btn-lg btn-secondary" onclick="copyNumber()">
+            <button class="btn btn-lg btn-secondary" onclick="copyNumber(document.querySelector('#accNumber'))">
               <i class="bi bi-files"></i>
               <span>Salin Nomor</span>
-            </div>
+            </button>
           </div>
         </div>
       </div>

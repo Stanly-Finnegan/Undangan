@@ -73,13 +73,40 @@ function enableScroll(){
 
 disableScroll();
 
-function copyNumber(){
-    const number = "721301006149531";
-    // navigator.clipboard.writeText(number);
+function copyNumber(htmlElement){
+
+
+    if(!htmlElement){
+        console.log('error');
+        return;
+    }
+
+    let elementText = htmlElement.innerText;
+    
+    let inputElement = document.createElement('input');
+    inputElement.setAttribute('value', elementText);
+    document.body.appendChild(inputElement);
+    inputElement.select();
     document.execCommand('copy');
+    inputElement.parentNode.removeChild(inputElement);
+    // const number = "721301006149531";
+    // number.focus();
+    // number.ariaSelected();
+    // navigator.clipboard.writeText(number);
+    // document.execCommand('copy');
     // window.prompt("Copy to clipboard?", number);
     // alert("Berhasil disalin")
+    
 }
+
+// function copyText(el) {
+//     var content = jQuery(el).siblings('p.accNumber').html()
+//     var temp = jQuery("<textarea>");
+//     jQuery("body").append(temp);
+//     temp.val(content.replace(/<br ?\/?>/g, "\n")).select();
+//     document.execCommand("copy");
+//     temp.remove();
+//     }
 
 
 window.addEventListener("load", function() {
