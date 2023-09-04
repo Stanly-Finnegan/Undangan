@@ -75,8 +75,8 @@ disableScroll();
 
 function copyNumber(){
     const number = "000000";
-
-    navigator.clipboard.writeText(number);
+    // navigator.clipboard.writeText(number);
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", number);
     alert("Berhasil disalin")
 }
 
