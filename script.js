@@ -76,7 +76,8 @@ disableScroll();
 function copyNumber(){
     const number = "721301006149531";
     // navigator.clipboard.writeText(number);
-    window.prompt("Copy to clipboard?", number);
+    document.execCommand('copy');
+    // window.prompt("Copy to clipboard?", number);
     // alert("Berhasil disalin")
 }
 
