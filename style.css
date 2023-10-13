@@ -30,7 +30,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(image/heroBG.jpg);
+    background-image: url(image/heroBG_resize.jpg);
     background-position: center;
     background-size: cover;
     z-index: -1;
@@ -358,7 +358,7 @@ footer ::after{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(image/footerBG.jpg);
+    background-image: url(image/footerBG_resize.jpg);
     background-position: center;
     background-size: cover;
     /* background-repeat: repeat; */

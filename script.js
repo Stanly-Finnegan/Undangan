@@ -33,7 +33,7 @@ function disableScroll(){
 }
 
 function playAudio(){
-    ;
+    song.volume = 0.2;
     song.play();
     audioIconWrapper.style.display = 'flex'
     isPlaying = true;
